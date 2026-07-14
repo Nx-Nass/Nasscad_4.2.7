@@ -5886,7 +5886,7 @@ function mDblClick(e){
     cotVisible=false; _rotMode=false; _camLast.objSig='';
   }
 }
-function mWheel(e){e.preventDefault();camA.dist=Math.max(5,Math.min(1600,camA.dist+e.deltaY*0.3));updCam();}
+function mWheel(e){e.preventDefault();camA.dist=Math.max(5,Math.min(cam.far,camA.dist+e.deltaY*0.3));updCam();}
 function onRz(){const vp=document.getElementById('vp');cam.aspect=vp.clientWidth/vp.clientHeight;cam.updateProjectionMatrix();ren.setSize(vp.clientWidth,vp.clientHeight);cotCanvas.width=vp.clientWidth;cotCanvas.height=vp.clientHeight;_camDirty=true;}
 
 // ═══════════════════════════════════════════════════════
